@@ -14,13 +14,10 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    @Autowired
-    EmailService emailService;
-
+ 
     //add data into userdata table
     public UserData addData(UserDTO userDTO) {
         UserData userData = new UserData(userDTO);
-        emailService.sendEmail(userDTO.getEmail(),"User created", "Hello you have successfully added new user");
         return userRepository.save(userData);
     }
 }
