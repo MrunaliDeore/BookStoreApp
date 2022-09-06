@@ -39,6 +39,19 @@ public class UserData {
         this.loginid = userDTO.getLoginid();
         this.password = userDTO.getPassword();
         this.isadmin = userDTO.isIsadmin();
-
     }
+
+    public UserData(int userid, UserData userData) {
+        this.userid = userid;
+        this.firstname = userData.getFirstname();
+        this.lastname = userData.getLastname();
+        this.email = userData.getEmail();
+        this.address = userData.getAddress();
+        this.loginid = userData.getLoginid();
+        this.password = userData.getPassword();
+        this.isadmin = userData.isIsadmin();
+    }
+
+
+
 }
